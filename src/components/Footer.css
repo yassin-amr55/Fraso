@@ -41,6 +41,20 @@
   margin-bottom: 8px;
 }
 
+.site-footer__author-link {
+  color: var(--ink-parchment-dim);
+  text-decoration: underline;
+  text-decoration-color: var(--border-hairline-strong);
+  text-underline-offset: 3px;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.site-footer__author-link:hover,
+.site-footer__author-link:focus-visible {
+  color: var(--red-bright);
+  text-decoration-color: var(--red-bright);
+}
+
 .site-footer__rule {
   width: 60px;
   height: 1px;

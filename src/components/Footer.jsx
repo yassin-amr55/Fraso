@@ -11,7 +11,17 @@ export function Footer() {
         </div>
 
         <h3 className="site-footer__title">Fraso</h3>
-        <p className="site-footer__byline">A story by Yassin Shehab</p>
+        <p className="site-footer__byline">
+          A story by{' '}
+          <a
+            href="https://www.yassinamr.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="site-footer__author-link"
+          >
+            Yassin Shehab
+          </a>
+        </p>
 
         <div className="site-footer__rule" aria-hidden="true" />
 
