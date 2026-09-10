@@ -227,6 +227,11 @@
 
 .hero__art-image {
   width: 100%;
+  /* The <img> also carries width/height="1414"/"2000" HTML attributes (a
+     CLS-prevention hint for before this stylesheet loads) — height: auto
+     is required here so aspect-ratio drives sizing instead of that fixed
+     2000px attribute value. */
+  height: auto;
   aspect-ratio: 5 / 7;
   object-fit: cover;
   object-position: top center;

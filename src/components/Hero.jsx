@@ -2,9 +2,16 @@ import { useEffect, useRef } from 'react';
 import { progress, remainingPercent } from '../data/progress';
 import { useCountUp } from '../hooks/useCountUp';
 import { useReducedMotion } from '../hooks/useReducedMotion';
-import coverArt from '../assets/fraso-cover.jpg';
-import coverArtAtmosphere from '../assets/fraso-cover-atmosphere.jpg';
 import elentLogo from '../assets/elent-tales-logo.png';
+
+// Served from /public with stable, unhashed filenames (rather than imported
+// from src/assets) so index.html can <link rel="preload"> the exact same
+// URL the browser ends up requesting — that starts the fetch immediately,
+// in parallel with the JS bundle, instead of waiting for React to mount
+// this component before the browser even discovers the image exists.
+const COVER_WEBP = '/cover.webp';
+const COVER_JPG = '/cover.jpg';
+const COVER_ATMOSPHERE_WEBP = '/cover-bg.webp';
 import './Hero.css';
 
 export function Hero() {
@@ -40,7 +47,11 @@ export function Hero() {
 
   return (
     <section className="hero" id="top">
-      <div className="hero__atmosphere" ref={atmosphereRef} style={{ backgroundImage: `url(${coverArtAtmosphere})` }} />
+      <div
+        className="hero__atmosphere"
+        ref={atmosphereRef}
+        style={{ backgroundImage: `url(${COVER_ATMOSPHERE_WEBP})` }}
+      />
       <div className="hero__vignette" />
       <div className="hero__scrim" />
 
@@ -83,7 +94,18 @@ export function Hero() {
 
           <div className="hero__art">
             <div className="hero__art-frame" ref={frameRef}>
-              <img src={coverArt} alt="Fraso — official cover art. A hero fights cruelty." className="hero__art-image" />
+              <picture>
+                <source srcSet={COVER_WEBP} type="image/webp" />
+                <img
+                  src={COVER_JPG}
+                  alt="Fraso — official cover art. A hero fights cruelty."
+                  className="hero__art-image"
+                  width="1414"
+                  height="2000"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </picture>
               <span className="hero__art-caption">Fraso &mdash; Cover Art</span>
             </div>
           </div>
