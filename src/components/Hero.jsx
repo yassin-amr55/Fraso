@@ -1,17 +1,19 @@
 import { useEffect, useRef } from 'react';
 import { progress, remainingPercent } from '../data/progress';
+import { seo } from '../data/seo';
 import { useCountUp } from '../hooks/useCountUp';
 import { useReducedMotion } from '../hooks/useReducedMotion';
 import elentLogo from '../assets/elent-tales-logo.png';
 
-// Served from /public with stable, unhashed filenames (rather than imported
-// from src/assets) so index.html can <link rel="preload"> the exact same
-// URL the browser ends up requesting — that starts the fetch immediately,
-// in parallel with the JS bundle, instead of waiting for React to mount
-// this component before the browser even discovers the image exists.
-const COVER_WEBP = '/cover.webp';
-const COVER_JPG = '/cover.jpg';
-const COVER_ATMOSPHERE_WEBP = '/cover-bg.webp';
+// Served from /public with stable, descriptive, unhashed filenames (rather
+// than imported from src/assets) so: (1) index.html can <link rel="preload">
+// the exact same URL the browser ends up requesting, which starts the fetch
+// immediately instead of waiting for React to mount this component; and
+// (2) the same descriptive filename is what a search engine or someone
+// right-clicking "save image" sees, not a generic hashed build name.
+const COVER_WEBP = '/fraso-story-cover.webp';
+const COVER_JPG = '/fraso-story-cover.jpg';
+const COVER_ATMOSPHERE_WEBP = '/fraso-story-cover-backdrop.webp';
 import './Hero.css';
 
 export function Hero() {
@@ -98,7 +100,7 @@ export function Hero() {
                 <source srcSet={COVER_WEBP} type="image/webp" />
                 <img
                   src={COVER_JPG}
-                  alt="Fraso — official cover art. A hero fights cruelty."
+                  alt={seo.coverImage.alt}
                   className="hero__art-image"
                   width="1414"
                   height="2000"

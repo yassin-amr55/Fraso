@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fraso-elent.vercel.app/sitemap.xml

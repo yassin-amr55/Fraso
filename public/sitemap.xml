@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This file is regenerated at build time (see the `emit-sitemap` plugin in
+  vite.config.js) from src/data/seo.js and src/data/progress.js, so the
+  copy actually deployed always has an accurate <lastmod>. This checked-in
+  copy is only what `npm run dev` serves locally.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://fraso-elent.vercel.app/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://fraso-elent.vercel.app/fraso-story-cover.jpg</image:loc>
+      <image:title>Fraso — Story Cover</image:title>
+      <image:caption>Fraso story cover art by Yassin Shehab, published under Elent Tales</image:caption>
+    </image:image>
+  </url>
+</urlset>

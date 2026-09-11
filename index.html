@@ -3,31 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Fraso — a dark fantasy story by Yassin Shehab, Elent Tales. Follow the story's progress from first idea to finished book." />
+    <meta name="description" content="__SITE_DESCRIPTION__" />
+    <meta name="author" content="Yassin Shehab" />
+    <!-- max-image-preview:large explicitly allows Google to show the full-
+         size cover in search results / Google Images rather than a small
+         thumbnail — the single most relevant robots directive for the
+         "get the cover into Google Images" goal. -->
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="__CANONICAL_URL__" />
     <meta name="theme-color" content="#0b0908" />
-    <title>Fraso — The Story Is Being Written</title>
+    <title>__SITE_TITLE__</title>
+
+    <!-- Search Console verification (HTML-tag method). No token is set —
+         see README.md's "Search Console" section for how to add one
+         after deploying; nothing is invented here. -->
+    <!-- __GOOGLE_SITE_VERIFICATION__ -->
 
     <!-- Open Graph / link-preview (WhatsApp, iMessage, Facebook, etc.) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://fraso-elent.vercel.app/" />
-    <meta property="og:title" content="Fraso — The Story Is Being Written" />
+    <meta property="og:url" content="__CANONICAL_URL__" />
+    <meta property="og:title" content="__SITE_TITLE__" />
     <meta property="og:description" content="A dark fantasy story by Yassin Shehab, Elent Tales. Follow Fraso's progress from first idea to finished book — __OVERALL_PERCENT__% complete." />
-    <meta property="og:image" content="https://fraso-elent.vercel.app/cover.jpg" />
-    <meta property="og:image:width" content="1414" />
-    <meta property="og:image:height" content="2000" />
+    <meta property="og:image" content="__COVER_IMAGE_URL__" />
+    <meta property="og:image:width" content="__COVER_IMAGE_WIDTH__" />
+    <meta property="og:image:height" content="__COVER_IMAGE_HEIGHT__" />
+    <meta property="og:image:alt" content="__COVER_IMAGE_ALT__" />
     <meta property="og:site_name" content="Fraso — Elent Tales" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter/X card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fraso — The Story Is Being Written" />
+    <meta name="twitter:title" content="__SITE_TITLE__" />
     <meta name="twitter:description" content="A dark fantasy story by Yassin Shehab, Elent Tales. Follow Fraso's progress from first idea to finished book — __OVERALL_PERCENT__% complete." />
-    <meta name="twitter:image" content="https://fraso-elent.vercel.app/cover.jpg" />
+    <meta name="twitter:image" content="__COVER_IMAGE_URL__" />
+    <meta name="twitter:image:alt" content="__COVER_IMAGE_ALT__" />
+
+    <!-- Structured data: the Fraso entity graph (story, author, publisher,
+         cover image, website, page) — generated from src/data/seo.js and
+         src/data/progress.js at build time, so these facts can never fall
+         out of sync with what the page actually shows. Static HTML, read
+         by any crawler regardless of whether it executes JavaScript. -->
+    <script type="application/ld+json">__JSON_LD__</script>
+    <script type="application/ld+json">__FAQ_JSON_LD__</script>
 
     <!-- Start fetching the hero cover art immediately, in parallel with the
          JS bundle, instead of waiting for React to mount the <img>. -->
-    <link rel="preload" as="image" href="/cover.webp" type="image/webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/cover-bg.webp" type="image/webp" />
+    <link rel="preload" as="image" href="/fraso-story-cover.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/fraso-story-cover-backdrop.webp" type="image/webp" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,6 +63,32 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Progressive-enhancement fallback: the page's real content is
+         rendered by React below, but a crawler or browser that can't run
+         JavaScript should still see who/what Fraso is, not a blank page.
+         This mirrors the actual on-page content exactly — nothing here
+         that a JS-enabled visitor doesn't also see. -->
+    <noscript>
+      <main style="max-width: 640px; margin: 0 auto; padding: 48px 24px; font-family: Georgia, serif; color: #ece2c8; background: #100d0b;">
+        <h1>Fraso</h1>
+        <p>
+          Fraso is an original dark fantasy story &mdash; &ldquo;A Hero Fights Cruelty&rdquo;
+          &mdash; created by Yassin Shehab and published under Elent Tales.
+        </p>
+        <img
+          src="/fraso-story-cover.jpg"
+          alt="Fraso story cover art by Yassin Shehab, published under Elent Tales"
+          width="1414"
+          height="2000"
+          style="max-width: 100%; height: auto;"
+        />
+        <h2>Story Progress</h2>
+        <p>Fraso is currently __OVERALL_PERCENT__% complete.</p>
+        <p>A story by <a href="https://www.yassinamr.com/" style="color: #e2393a;">Yassin Shehab</a> &mdash; Elent Tales.</p>
+      </main>
+    </noscript>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

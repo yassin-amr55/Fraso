@@ -3,6 +3,7 @@ import { ProgressSection } from './components/ProgressSection';
 import { MilestoneSection } from './components/MilestoneSection';
 import { ChapterTimeline } from './components/ChapterTimeline';
 import { WordStats } from './components/WordStats';
+import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <MilestoneSection />
         <ChapterTimeline />
         <WordStats />
+        <FAQSection />
       </main>
       <Footer />
     </>

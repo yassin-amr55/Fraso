@@ -22,7 +22,7 @@ export function MilestoneSection() {
         <Reveal delay={180} className="milestone__rule" as="span" aria-hidden="true" />
 
         <Reveal delay={220}>
-          <p className="milestone__label">Pages Completely Finished</p>
+          <h2 className="milestone__label">Pages Completely Finished</h2>
         </Reveal>
 
         <Reveal delay={280}>

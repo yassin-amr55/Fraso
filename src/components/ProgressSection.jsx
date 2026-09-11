@@ -17,9 +17,10 @@ export function ProgressSection() {
           </Reveal>
           <Reveal delay={140}>
             <p className="section-sub">
-              Every stage of Fraso, tracked openly &mdash; from the first idea to the final polished
-              page. The number below is the one that matters most: how much of the whole story
-              exists today.
+              Fraso is an original dark fantasy story by Yassin Shehab, published under Elent
+              Tales. Every stage of it is tracked openly here &mdash; from the first idea to the
+              final polished page. The number below is the one that matters most: how much of the
+              whole story exists today.
             </p>
           </Reveal>
         </div>
