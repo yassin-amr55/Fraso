@@ -17,7 +17,7 @@ export const progress = {
   // The single official "how much of Fraso is done" number.
   // This is set by hand — it is intentionally NOT an average of the
   // categories below.
-  overall: 49.1,
+  overall: 49.2,
 
   // Production categories — shown in the "FRASO PROGRESS" section.
   // Add/remove a category here and the grid updates automatically.
@@ -26,13 +26,13 @@ export const progress = {
     { key: 'storyLines', label: 'Story Lines', value: 100 },
     { key: 'textWriting', label: 'Text Writing', value: 100 },
     { key: 'textPolish', label: 'Text Polish', value: 70 },
-    { key: 'sceneDrawing', label: 'Scene Drawing', value: 47 },
+    { key: 'sceneDrawing', label: 'Scene Drawing', value: 48 },
     { key: 'scenePolish', label: 'Scene Polish', value: 45 },
     { key: 'bookCover', label: 'Book Cover', value: 50 },
   ],
 
   // Pages milestone.
-  pagesCompleted: 75,
+  pagesCompleted: 76,
 
   // Chapter-by-chapter progress. `status` of "locked" renders the chapter
   // as a "coming soon" placeholder instead of a percentage — use this only
@@ -41,7 +41,7 @@ export const progress = {
   // shows it grayed out rather than red, without calling it "coming soon".
   chapters: [
     { key: 'book1-chapter1', label: 'Book 1 · Chapter 01', value: 100, status: 'active' },
-    { key: 'book1-chapter2', label: 'Book 1 · Chapter 02', value: 75, status: 'active' },
+    { key: 'book1-chapter2', label: 'Book 1 · Chapter 02', value: 76, status: 'active' },
     { key: 'book1-chapter3', label: 'Book 1 · Chapter 03', value: 30, status: 'active' },
     { key: 'book2-chapter1', label: 'Book 2 · Chapter 01', value: 0, status: 'active' },
   ],
