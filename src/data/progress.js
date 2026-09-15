@@ -32,7 +32,7 @@ export const progress = {
   ],
 
   // Pages milestone.
-  pagesCompleted: 80,
+  pagesCompleted: 81,
 
   // Chapter-by-chapter progress. `status` of "locked" renders the chapter
   // as a "coming soon" placeholder instead of a percentage — use this only
@@ -41,7 +41,7 @@ export const progress = {
   // shows it grayed out rather than red, without calling it "coming soon".
   chapters: [
     { key: 'book1-chapter1', label: 'Book 1 · Chapter 01', value: 100, status: 'active' },
-    { key: 'book1-chapter2', label: 'Book 1 · Chapter 02', value: 80, status: 'active' },
+    { key: 'book1-chapter2', label: 'Book 1 · Chapter 02', value: 81, status: 'active' },
     { key: 'book1-chapter3', label: 'Book 1 · Chapter 03', value: 30, status: 'active' },
     { key: 'book2-chapter1', label: 'Book 2 · Chapter 01', value: 0, status: 'active' },
   ],
