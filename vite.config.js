@@ -34,6 +34,7 @@ function injectSeoMeta() {
         __SITE_DESCRIPTION__: seo.description,
         __CANONICAL_URL__: canonicalUrl,
         __COVER_IMAGE_URL__: seo.coverImage.url,
+        __OG_IMAGE_URL__: `${seo.coverImage.url}?v=${seo.coverImage.version}`,
         __COVER_IMAGE_WIDTH__: String(seo.coverImage.width),
         __COVER_IMAGE_HEIGHT__: String(seo.coverImage.height),
         __COVER_IMAGE_ALT__: seo.coverImage.alt,

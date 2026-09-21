@@ -43,6 +43,11 @@ export const seo = {
     webpUrl: `${canonicalUrl}fraso-story-cover.webp`,
     width: 1414,
     height: 2000,
+    // Bump this whenever the cover artwork changes. It's appended to the
+    // og:image / twitter:image URLs only (not JSON-LD or the sitemap), so
+    // WhatsApp/Facebook/X see a brand-new image URL and don't keep serving
+    // a cached copy of the previous cover in link previews.
+    version: '2',
     // Human-first alt text: what the image actually is, for anyone using
     // a screen reader, plus the same context a search engine needs.
     alt: 'Fraso story cover art by Yassin Shehab, published under Elent Tales',
@@ -75,7 +80,7 @@ export const faq = [
   {
     question: 'What is Fraso?',
     answer:
-      "Fraso is an original dark fantasy story — \"A Hero Fights Cruelty\" — created by Yassin Shehab and published under Elent Tales.",
+      "Fraso is an original dark fantasy story — \"Rising From Ashes\" — created by Yassin Shehab and published under Elent Tales.",
   },
   {
     question: 'Who created Fraso?',
@@ -197,7 +202,7 @@ export function buildJsonLd() {
       '@type': 'Book',
       '@id': workId,
       name: 'Fraso',
-      alternateName: 'Fraso — A Hero Fights Cruelty',
+      alternateName: 'Fraso — Rising From Ashes',
       author: { '@id': personId },
       creator: { '@id': personId },
       publisher: { '@id': orgId },
