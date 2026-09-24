@@ -20,7 +20,8 @@ displays is read from two files:
 
 - **[src/data/progress.js](src/data/progress.js)** — overall completion %, the production
   category percentages (Idea, Story Lines, Text Writing, Text Polish, Scene Drawing, Scene
-  Polish, Book Cover), pages completed, chapter progress, and the release-countdown switch.
+  Polish, Book Cover), pages completed (and the total pages targeted, shown as "83 / 175"),
+  chapter progress, and the release-countdown switch.
 - **[src/data/wordStats.js](src/data/wordStats.js)** — word/name mention counts. The
   leaderboard sorts itself by count automatically, so entries can be listed in any order and
   you can add or remove words freely.

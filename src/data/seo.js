@@ -96,7 +96,9 @@ export const faq = [
   },
   {
     question: 'How many pages of Fraso are finished?',
-    answer: `${progress.pagesCompleted} pages are completely finished so far.`,
+    answer: progress.pagesTarget
+      ? `${progress.pagesCompleted} pages are completely finished so far, out of a planned ${progress.pagesTarget}.`
+      : `${progress.pagesCompleted} pages are completely finished so far.`,
   },
   {
     question: 'What chapters of Fraso are complete?',
@@ -208,7 +210,9 @@ export function buildJsonLd() {
       publisher: { '@id': orgId },
       image: { '@id': imageId },
       inLanguage: seo.locale,
-      description: `Fraso is an original dark fantasy story by ${seo.author}, published under ${seo.organization}. It is currently ${progress.overall}% complete, with ${progress.pagesCompleted} pages finished. ${chapterSummary}`,
+      description: `Fraso is an original dark fantasy story by ${seo.author}, published under ${seo.organization}. It is currently ${progress.overall}% complete, with ${progress.pagesCompleted}${
+        progress.pagesTarget ? ` of a planned ${progress.pagesTarget}` : ''
+      } pages finished. ${chapterSummary}`,
       url: canonicalUrl,
     },
     {

@@ -1,11 +1,18 @@
-import { progress } from '../data/progress';
+import { progress, pagesPercent } from '../data/progress';
 import { Reveal } from './ui/Reveal';
 import { useCountUp } from '../hooks/useCountUp';
 import './MilestoneSection.css';
 
 function MilestoneNumber({ inView }) {
   const value = useCountUp(progress.pagesCompleted, { start: inView, duration: 1800 });
-  return <span className="milestone__number">{Math.round(value)}</span>;
+  return (
+    <span className="milestone__number">
+      {Math.round(value)}
+      {progress.pagesTarget && (
+        <span className="milestone__number-target">/ {progress.pagesTarget}</span>
+      )}
+    </span>
+  );
 }
 
 export function MilestoneSection() {
@@ -19,6 +26,22 @@ export function MilestoneSection() {
 
         <Reveal delay={80}>{(inView) => <MilestoneNumber inView={inView} />}</Reveal>
 
+        {progress.pagesTarget && (
+          <Reveal delay={140} className="milestone__track-wrap">
+            {(inView) => (
+              <>
+                <div className="milestone__track">
+                  <div
+                    className="milestone__track-fill"
+                    style={{ width: inView ? `${pagesPercent}%` : '0%' }}
+                  />
+                </div>
+                <span className="milestone__track-caption">{pagesPercent}% of pages drafted</span>
+              </>
+            )}
+          </Reveal>
+        )}
+
         <Reveal delay={180} className="milestone__rule" as="span" aria-hidden="true" />
 
         <Reveal delay={220}>
@@ -26,7 +49,11 @@ export function MilestoneSection() {
         </Reveal>
 
         <Reveal delay={280}>
-          <p className="milestone__hand">already completed &mdash; and counting</p>
+          <p className="milestone__hand">
+            {progress.pagesTarget
+              ? `already completed — on the way to ${progress.pagesTarget}`
+              : 'already completed — and counting'}
+          </p>
         </Reveal>
       </div>
     </section>

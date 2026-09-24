@@ -33,6 +33,11 @@ export const progress = {
 
   // Pages milestone.
   pagesCompleted: 83,
+  // Total pages Fraso is currently expected to run. Shown as "83 / 175" in
+  // the milestone section and used to fill its progress bar. Set to `null`
+  // to go back to showing pagesCompleted alone with no target/bar, exactly
+  // like before this existed.
+  pagesTarget: 175,
 
   // Chapter-by-chapter progress. `status` of "locked" renders the chapter
   // as a "coming soon" placeholder instead of a percentage — use this only
@@ -68,3 +73,8 @@ export const progress = {
 
 /** Derived: how much of the story is left, computed from `overall`. */
 export const remainingPercent = Number((100 - progress.overall).toFixed(1));
+
+/** Derived: pagesCompleted as a % of pagesTarget, or null if there's no target set. */
+export const pagesPercent = progress.pagesTarget
+  ? Number(Math.min(100, (progress.pagesCompleted / progress.pagesTarget) * 100).toFixed(1))
+  : null;
