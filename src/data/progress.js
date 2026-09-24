@@ -37,7 +37,7 @@ export const progress = {
   // the milestone section and used to fill its progress bar. Set to `null`
   // to go back to showing pagesCompleted alone with no target/bar, exactly
   // like before this existed.
-  pagesTarget: 175,
+  pagesTarget: 207,
 
   // Chapter-by-chapter progress. `status` of "locked" renders the chapter
   // as a "coming soon" placeholder instead of a percentage — use this only
@@ -67,7 +67,7 @@ export const progress = {
   // Freely editable. Set any of these to `null` to hide them from the UI
   // instead of showing a fabricated value.
   currentPhase: 'Scene Drawing',
-  lastUpdated: 'September 23, 2026',
+  lastUpdated: 'September 24, 2026',
   wordCount: null,
 };
 
