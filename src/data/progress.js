@@ -17,7 +17,7 @@ export const progress = {
   // The single official "how much of Fraso is done" number.
   // This is set by hand — it is intentionally NOT an average of the
   // categories below.
-  overall: 51.2,
+  overall: 51.7,
 
   // Production categories — shown in the "FRASO PROGRESS" section.
   // Add/remove a category here and the grid updates automatically.
@@ -67,7 +67,7 @@ export const progress = {
   // Freely editable. Set any of these to `null` to hide them from the UI
   // instead of showing a fabricated value.
   currentPhase: 'Scene Drawing',
-  lastUpdated: 'October 6, 2026',
+  lastUpdated: 'October 7, 2026',
   wordCount: null,
 };
 
