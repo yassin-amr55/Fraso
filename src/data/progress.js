@@ -26,6 +26,7 @@ export const progress = {
     { key: 'storyLines', label: 'Story Lines', value: 100 },
     { key: 'textWriting', label: 'Text Writing', value: 100 },
     { key: 'textPolish', label: 'Text Polish', value: 75 },
+    { key: 'scenePlanning', label: 'Scene Planning', value: 60 },
     { key: 'sceneDrawing', label: 'Scene Drawing', value: 48 },
     { key: 'scenePolish', label: 'Scene Polish', value: 46 },
     { key: 'bookCover', label: 'Book Cover', value: 50 },
