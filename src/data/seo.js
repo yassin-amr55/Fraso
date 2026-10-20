@@ -33,7 +33,7 @@ export const seo = {
   // anything about the design.
   title: 'Fraso — The Story Is Being Written | Elent Tales',
   description:
-    "Fraso is an original dark fantasy story by Yassin Shehab, published under Elent Tales. Follow its progress live, from first ideas to finished pages and chapters.",
+    "Fraso is an original medieval fantasy story by Yassin Shehab, published under Elent Tales. Follow its progress live, from first ideas to finished pages and chapters.",
   author: 'Yassin Shehab',
   authorUrl: 'https://www.yassinamr.com/',
   organization: 'Elent Tales',
@@ -80,7 +80,7 @@ export const faq = [
   {
     question: 'What is Fraso?',
     answer:
-      "Fraso is an original dark fantasy story — \"Rising From Ashes\" — created by Yassin Shehab and published under Elent Tales.",
+      "Fraso is an original medieval fantasy story — \"Rising From Ashes\" — created by Yassin Shehab and published under Elent Tales.",
   },
   {
     question: 'Who created Fraso?',
