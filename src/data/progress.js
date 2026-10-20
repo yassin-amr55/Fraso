@@ -25,7 +25,7 @@ export const progress = {
     { key: 'idea', label: 'Idea', value: 100 },
     { key: 'storyLines', label: 'Story Lines', value: 100 },
     { key: 'textWriting', label: 'Text Writing', value: 100 },
-    { key: 'textPolish', label: 'Text Polish', value: 74 },
+    { key: 'textPolish', label: 'Text Polish', value: 75 },
     { key: 'sceneDrawing', label: 'Scene Drawing', value: 48 },
     { key: 'scenePolish', label: 'Scene Polish', value: 46 },
     { key: 'bookCover', label: 'Book Cover', value: 50 },
@@ -47,7 +47,7 @@ export const progress = {
   chapters: [
     { key: 'book1-chapter1', label: 'Book 1 · Chapter 01', value: 100, status: 'active' },
     { key: 'book1-chapter2', label: 'Book 1 · Chapter 02', value: 95, status: 'active' },
-    { key: 'book1-chapter3', label: 'Book 1 · Chapter 03', value: 40, status: 'active' },
+    { key: 'book1-chapter3', label: 'Book 1 · Chapter 03', value: 41, status: 'active' },
     { key: 'book2-chapter1', label: 'Book 2 · Chapter 01', value: 0, status: 'active' },
   ],
 
@@ -66,8 +66,8 @@ export const progress = {
   // ── Misc / editable placeholders ──────────────────────────────────────
   // Freely editable. Set any of these to `null` to hide them from the UI
   // instead of showing a fabricated value.
-  currentPhase: 'Scene Drawing',
-  lastUpdated: 'October 18, 2026',
+  currentPhase: 'Scene Planning',
+  lastUpdated: 'October 20, 2026',
   wordCount: null,
 };
 
