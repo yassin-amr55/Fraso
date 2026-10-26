@@ -17,7 +17,7 @@ export const progress = {
   // The single official "how much of Fraso is done" number.
   // This is set by hand — it is intentionally NOT an average of the
   // categories below.
-  overall: 58.9,
+  overall: 60.5,
 
   // Production categories — shown in the "FRASO PROGRESS" section.
   // Add/remove a category here and the grid updates automatically.
@@ -25,8 +25,8 @@ export const progress = {
     { key: 'idea', label: 'Idea', value: 100 },
     { key: 'storyLines', label: 'Story Lines', value: 100 },
     { key: 'textWriting', label: 'Text Writing', value: 100 },
-    { key: 'textPolish', label: 'Text Polish', value: 75 },
-    { key: 'scenePlanning', label: 'Scene Planning', value: 60 },
+    { key: 'textPolish', label: 'Text Polish', value: 77 },
+    { key: 'scenePlanning', label: 'Scene Planning', value: 63 },
     { key: 'sceneDrawing', label: 'Scene Drawing', value: 48 },
     { key: 'scenePolish', label: 'Scene Polish', value: 46 },
     { key: 'bookCover', label: 'Book Cover', value: 50 },
@@ -48,7 +48,7 @@ export const progress = {
   chapters: [
     { key: 'book1-chapter1', label: 'Book 1 · Chapter 01', value: 100, status: 'active' },
     { key: 'book1-chapter2', label: 'Book 1 · Chapter 02', value: 95, status: 'active' },
-    { key: 'book1-chapter3', label: 'Book 1 · Chapter 03', value: 41, status: 'active' },
+    { key: 'book1-chapter3', label: 'Book 1 · Chapter 03', value: 44, status: 'active' },
     { key: 'book2-chapter1', label: 'Book 2 · Chapter 01', value: 0, status: 'active' },
   ],
 
@@ -68,7 +68,7 @@ export const progress = {
   // Freely editable. Set any of these to `null` to hide them from the UI
   // instead of showing a fabricated value.
   currentPhase: 'Scene Planning',
-  lastUpdated: 'October 20, 2026',
+  lastUpdated: 'October 26, 2026',
   wordCount: null,
 };
 
